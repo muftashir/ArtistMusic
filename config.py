@@ -23,14 +23,14 @@ load_dotenv()
 class Config:
     def __init__(self):
         # Telegram API
-        self.API_ID: int = int(getenv("API_ID", "29308061"))
-        self.API_HASH: str = getenv("API_HASH", "462de3dfc98fd938ef9c6ee31a72d099")
+        self.API_ID: int = int(getenv("API_ID", "38751960"))
+        self.API_HASH: str = getenv("API_HASH", "4e8f828046a30ec70899b523bd763fa9")
         self.BOT_TOKEN: str = getenv("BOT_TOKEN", "")
-        self.LOGGER_ID: int = int(getenv("LOGGER_ID", "0"))
-        self.OWNER_ID: int = int(getenv("OWNER_ID", "0"))
+        self.LOGGER_ID: int = int(getenv("LOGGER_ID", "-1004422224007"))
+        self.OWNER_ID: int = int(getenv("OWNER_ID", "7754709357"))
 
         # Database
-        self.MONGO_URL: str = getenv("MONGO_DB_URI", "mongodb+srv://Elevenyts:Elevenyts@cluster0.vuyc1u2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+        self.MONGO_URL: str = getenv("MONGO_DB_URI", "")
 
         # Limits
         self.DURATION_LIMIT: int = int(getenv("DURATION_LIMIT", "300")) * 60
