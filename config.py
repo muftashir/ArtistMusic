@@ -43,8 +43,8 @@ class Config:
         self.SESSION3: str = getenv("STRING_SESSION3", "")
 
         # Support Links
-        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/Elevenytschats")
-        self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/Artistbots")
+        self.SUPPORT_CHANNEL: str = getenv("SUPPORT_CHANNEL", "https://t.me/+0bPLOJYCDysxYTY1")
+        self.SUPPORT_CHAT: str = getenv("SUPPORT_CHAT", "https://t.me/Solurix_bots")
 
         # Excluded Chats
         self.EXCLUDED_CHATS: List[int] = self._parse_excluded_chats()
@@ -68,10 +68,10 @@ class Config:
         self.COOKIES_URL: List[str] = self._parse_cookies()
 
         # Images
-        self.DEFAULT_THUMB: str = getenv("DEFAULT_THUMB", "https://files.catbox.moe/3p0du3.jpeg")
-        self.PING_IMG: str = getenv("PING_IMG", "https://files.catbox.moe/3p0du3.jpeg")
-        self.START_IMG: str = getenv("START_IMG", "https://files.catbox.moe/3p0du3.jpeg")
-        self.RADIO_IMG: str = getenv("RADIO_IMG", "https://files.catbox.moe/3p0du3.jpeg")
+        self.DEFAULT_THUMB: str = getenv("DEFAULT_THUMB", "https://graph.org/file/3f096b9c171efc9392184-995f2753ec1b4b2dce.jpg")
+        self.PING_IMG: str = getenv("PING_IMG", "https://graph.org/file/810ccd8e608743200e2f5-ffbf8e331c1d7e8021.jpg")
+        self.START_IMG: str = getenv("START_IMG", "https://graph.org/file/e040e4cddba37a989dc9e-fbf6ec3ac3c6223c61.jpg")
+        self.RADIO_IMG: str = getenv("RADIO_IMG", "https://graph.org/file/c28a002063de65992821a-481e49cac17c5359b6.jpg")
         
         # Moderation
         self.EXCLUDED_USERNAMES: List[str] = getenv("EXCLUDED_USERNAMES", "").split()
