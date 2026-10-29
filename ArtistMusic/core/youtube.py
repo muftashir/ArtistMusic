@@ -417,10 +417,15 @@ class YouTube:
                     "postprocessors": [],
                 }
 
-            ydl_opts_cookie = {
-                **ydl_opts,
-                "cookiefile": cookie,
-            }
+            ydl_opts_cookie = dict(ydl_opts)
+
+            if cookie and os.path.isfile(cookie) and os.path.getsize(cookie) > 0:
+                ydl_opts_cookie["cookiefile"] = cookie
+                logger.info("🍪 Valid cookie file found.")
+            else:
+                logger.warning(
+                    "⚠️ Cookie file missing or empty; trying without cookies."
+                )
 
             def _download(ydl_runtime_opts):
                 ydl_instance = None
