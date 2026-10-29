@@ -622,7 +622,6 @@ class YouTube:
             ydl_opts = {
                 "quiet": True,
                 "no_warnings": True,
-                "cookiefile": cookie,
                 "format": "bestaudio/best",
                 "noplaylist": True,
                 "socket_timeout": 20,
@@ -630,6 +629,8 @@ class YouTube:
                 "sleep_interval_requests": 1,
                 "extractor_args": {"youtube": {"player_client": ["android", "web"]}},
             }
+            if cookie and os.path.isfile(cookie) and os.path.getsize(cookie) > 0:
+                ydl_opts["cookiefile"] = cookie
 
             def _extract_url():
                 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
