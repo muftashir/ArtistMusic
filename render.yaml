@@ -20,3 +20,6 @@ services:
     buildCommand: pip install -U -r requirements.txt
     startCommand: python -m ArtistMusic
     plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
